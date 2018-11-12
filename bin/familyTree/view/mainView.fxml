@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="familyTree.controller.FamilyTreeController">
+   <children>
+      <AnchorPane layoutX="3.0" prefHeight="800.0" prefWidth="700.0">
+         <children>
+            <TextField fx:id="firstNameField" layoutX="54.0" layoutY="549.0" />
+            <TextField fx:id="lastNameField" layoutX="357.0" layoutY="549.0" />
+            <ChoiceBox fx:id="genderChoiceBox" layoutX="54.0" layoutY="635.0" prefHeight="31.0" prefWidth="187.0" />
+            <DatePicker fx:id="datePickerBox" layoutX="357.0" layoutY="635.0" prefHeight="31.0" prefWidth="187.0" />
+            <Button fx:id="addNewButton" layoutX="166.0" layoutY="711.0" mnemonicParsing="false" onAction="#addNewMember" text="ADD MEMBER" />
+            <StackPane fx:id="treePane" layoutX="37.0" layoutY="43.0" prefHeight="451.0" prefWidth="513.0">
+               <children>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                    <content>
+                      <AnchorPane fx:id="treeScrollPane" minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="513.0" />
+                    </content>
+                  </ScrollPane>
+               </children></StackPane>
+            <Label layoutX="54.0" layoutY="518.0" text="Please enter the first name:" />
+            <Label layoutX="361.0" layoutY="518.0" text="Please enter the last name:" />
+            <Label layoutX="58.0" layoutY="605.0" text="Pick a gender:" />
+            <Label layoutX="361.0" layoutY="605.0" text="Pick a birthdate:" />
+            <Button layoutX="571.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateMember" text="UPDATE" />
+            <Button layoutX="571.0" layoutY="127.0" mnemonicParsing="false" onAction="#deleteMember" prefHeight="31.0" prefWidth="75.0" text="DELETE" />
+            <Button layoutX="319.0" layoutY="711.0" mnemonicParsing="false" onAction="#saveToXML" text="SAVE AS JSON" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
